@@ -1,0 +1,193 @@
+$icons: (
+    search: (
+        dimensions: (2rem, 2rem),
+        hover: true,
+        focus: true,
+        active: true,
+        disabled: true
+    ),
+    select: (
+        dimensions: (1.6rem, 1.6rem),
+        hover: true,
+        focus: true,
+        active: true,
+        disabled: true
+    ),
+    close: (
+        dimensions: (2.4rem, 2.4rem),
+        hover: true,
+        focus: true,
+        active: false,
+        disabled: false
+    )
+    // 다른 아이콘도 여기에 추가
+);
+
+@mixin icon($url, $width, $height) {
+    background-image: url($url);
+    width: $width;
+    height: $height;
+}
+
+@mixin icon-state($name, $state) {
+    &:#{$state} {
+        background-image: url("../images/icon/#{$name}-#{$state}.svg");
+    }
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    @each $name, $properties in $icons {
+        $dimensions: map-get($properties, dimensions);
+        $hover: if(map-has-key($properties, hover), map-get($properties, hover), false);
+        $focus: if(map-has-key($properties, focus), map-get($properties, focus), false);
+        $active: if(map-has-key($properties, active), map-get($properties, active), false);
+        $disabled: if(map-has-key($properties, disabled), map-get($properties, disabled), false);
+
+        $width: nth($dimensions, 1);
+        $height: nth($dimensions, 2);
+
+        &-#{$name} {
+            @include icon("../images/icon/#{$name}.svg", $width, $height);
+
+            @if $hover == true {
+                @include icon-state($name, hover);
+            }
+
+            @if $focus == true {
+                @include icon-state($name, focus);
+            }
+
+            @if $active == true {
+                @include icon-state($name, active);
+            }
+
+            @if $disabled == true {
+                @include icon-state($name, disabled);
+            }
+        }
+    }
+}
+
+
+.icon-gps{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("../images/icon/gps@16x16.svg") no-repeat 50% 50% / cover;
+}
+.icon-gps-gray{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("../images/icon/gps-gray@16x16.svg") no-repeat 50% 50% / cover;
+}
+
+.icon-eraser{
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: url("../images/icon/eraser@28x28.svg") no-repeat 50% 50%;
+    &[aria-pressed="true"] &{
+        background-image: url("../images/icon/eraser-active@28x28.svg");
+    }
+}
+.icon-distance{
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: url("../images/icon/measure-distance@28x28.svg") no-repeat 50% 50%;
+    &[aria-pressed="true"] &{
+        background-image: url("../images/icon/measure-distance-active@28x28.svg");
+    }
+}
+.icon-area{
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: url("../images/icon/measure-area@28x28.svg") no-repeat 50% 50%;
+    &[aria-pressed="true"] &{
+        background-image: url("../images/icon/measure-area-active@28x28.svg");
+    }
+}
+
+
+.btn__close{
+    .icon-close-black{
+        display: inline-block;
+        width: 2rem;height: 2rem;
+    }
+}
+.icon-close-black{
+    //background: url("../iamges/icon/closex20.svg") no-repeat 50% 50%;   
+}
+
+
+.icon-ask{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("../images/icon/ask@16x16.svg") no-repeat 50% 50%;
+}
+.icon-subsidy{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/icon/subsidy.svg") no-repeat 50% 50%;
+}
+
+.icon-plus{
+    display: inline-block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url("../images/icon/plus@12x12.svg") no-repeat 50% 50%;
+}
+.icon-i{
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    background: url("../images/icon/i@14x14.svg") no-repeat 50% 50%;
+}
+
+.icon-none{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/icon/none@20x20.svg") no-repeat 50% 50%;
+}
+
+.icon-favorite{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/icon/favorite@24x24.svg") no-repeat 50% 50%;
+}
+.icon-share{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("../images/icon/share@24x24.svg") no-repeat 50% 50%;
+}
+.icon-link{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/icon/link@20x20.svg") no-repeat 50% 50%;
+}
+.icon-down{
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background: url("../images/icon/down@20x20.svg") no-repeat 50% 50%;
+}
+
+.icon-call{
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    background: url("../images/icon/call@24x24.svg") no-repeat 50% 50%;
+}

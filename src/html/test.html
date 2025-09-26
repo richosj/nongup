@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS</title>
+    <link rel="stylesheet" href="./assets/font/Pretendard.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" type="text/css">
+	<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.1/proj4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+<div id="all4">
+    @@include("./include/search.html")
+
+    @@include("./include/mobile-category.html")
+    <!--// 모바일 카테고리  -->
+
+    <!-- <div class="mobile-controler" data-apply="mobile">
+        <button type="button" title="" aria-pressed=""><i aria-hidden="true"></i></button>
+    </div> -->
+
+    @@include("./include/list.html")
+    <!-- // 좌측 구성 --> 
+    @@include("./include/address.html")
+    <!-- // 가운데 구성 --> 
+    @@include("./include/cartography.html")
+    @@include("./include/location.html")
+    @@include("./include/toolbar.html")
+
+    <!-- @@include("./include/mobile-toolbar.html") -->
+
+    <!-- // 우측 구성 --> 
+    @@include("./include/map.html")
+
+    <div class="address-view" data-apply="mobile">
+        <span><i class="icon-gps"></i>세종특별자치시 연서면 고북리</span>
+    </div>
+
+    <div class="total-area-view">
+        <span>총면적 <b>40,981.5</b>m<sup>2</sup></span>
+    </div>
+    @@include("./include/touch.html")
+    <!-- @@include("./include/mobile-footmenu.html") -->
+</div>
+
+<script src="assets/js/all.min.js"></script>
+<script>
+  const depthList = document.querySelector('.depth');    
+  const sortable = Sortable.create(depthList, {
+        handle: '.draggable',  
+        animation: 150,        
+        onEnd: function (evt) {
+            console.log('순서 변경:', evt.oldIndex, '=>', evt.newIndex);
+        }
+  });
+
+// 화면 테스트용
+if (window.location.hash === "#cultivation") {
+    // 농지 상세 정보 
+    document.querySelector('[data-panel="cultivation"]').setAttribute('aria-hidden', false);
+} else if (window.location.hash === "#announ") {
+    document.querySelector('[data-panel="announ"]').setAttribute('aria-hidden', false);
+} else if (window.location.hash === "#contact") {
+
+}
+
+
+const toggleSwitch = document.querySelectorAll('.switch-group .toggle')
+toggleSwitch.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const siblings = toggle.parentElement.children;
+        for (let sibling of siblings) {
+            sibling.classList.remove('active');
+        }
+        toggle.classList.toggle('active');
+    })
+})
+
+</script>
+</body>
+</html>

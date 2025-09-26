@@ -1,0 +1,92 @@
+.mobile-toolbar{
+    position: absolute;
+    right: var(--gap);
+    top: 14.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem 0;
+    z-index: 2;
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(221, 221, 221, 1);
+        background-color: #fff;
+        &:active,
+        &[aria-pressed="true"]{
+            border-color: var(--color-active);
+        }
+        &.active{
+            border-color: var(--color-active);
+        }
+        i{
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            width: 1.8rem;height: 1.8rem;
+        }
+    }
+    [data-mobile-widget="layer"]{
+        i{background-image: url(../images/icon/layer@18x18.svg);}
+    }
+    [data-mobile-widget="marker"]{
+        i{background-image: url(../images/icon/marker@18x18.svg);}
+    }
+    [data-mobile-widget="zoomin"]{
+        i{background-image: url(../images/icon/zoomin.svg);}
+    }
+    [data-mobile-widget="zoomout"]{
+        i{background-image: url(../images/icon/zoomout.svg);}
+    }
+    [data-mobile-widget="measure"]{
+        i{background-image: url(../images/icon/measure.svg);}
+        &:active,
+        &[aria-pressed="true"]{
+            i{
+                background-image: url("../images/icon/measure-active.svg");
+            }
+        }
+    }
+    [data-mobile-widget="zoomin"]:active{
+        i{
+            background-image: url("../images/icon/zoomin-active.svg");
+        }
+    }
+    [data-mobile-widget="zoomout"],
+    [data-mobile-widget="zoomin"]{
+        &[aria-pressed="true"]{
+            border: 1px solid rgb(221, 221, 221);
+        }
+    }
+    [data-mobile-widget="zoomout"]:active{
+        i{
+            background-image: url("../images/icon/zoomout-active.svg");
+        }
+    }
+    [data-mobile-widget="layer"]{
+        i{
+            background-image: url("../images/icon/layer@18x18.svg");
+        }
+        &:active,
+        &[aria-pressed='true']{
+            i{
+                background-image: url("../images/icon/layer@18x18-active.svg");
+            }
+        }
+    }
+    [data-mobile-widget="marker"]{
+        i{
+            background-image: url("../images/icon/marker@18x18.svg");
+        }
+        &:active,
+        &[aria-pressed='true']{
+            i{
+                background-image: url("../images/icon/marker@18x18-active.svg");
+            }
+        }
+    }    
+}

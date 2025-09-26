@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS</title>
+    <link rel="stylesheet" href="./assets/font/Pretendard.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/css/ol.css" type="text/css">
+	<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.15.1/build/ol.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.6.1/proj4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+</head>
+<body>
+<div id="all4">
+    @@include("./include/search.html")
+
+    
+
+    @@include("./include/list.html")
+    <!-- // 좌측 구성 -->
+    @@include("./include/address.html")
+    <!-- // 가운데 구성 -->
+    @@include("./include/cartography.html")
+    @@include("./include/location.html")
+    @@include("./include/toolbar.html")
+
+    
+
+    <!-- // 우측 구성 --> 
+    @@include("./include/map.html")
+    <div class="address-view" data-apply="mobile">
+        <span><i class="icon-gps"></i>세종특별자치시 연서면 고북리</span>
+    </div>
+    <div class="total-area-view">
+        <span>총면적 <b>40,981.5</b>m<sup>2</sup></span>
+    </div>
+</div>
+
+<script src="assets/js/all.min.js"></script>
+<script>
+  const depthList = document.querySelector('.depth');
+  const sortable = Sortable.create(depthList, {
+        handle: '.draggable',
+        animation: 150,
+        onEnd: function (evt) {
+            console.log('순서 변경:', evt.oldIndex, '=>', evt.newIndex);
+        }
+  });
+
+// 화면 테스트용
+if (window.location.hash === "#cultivation") {
+    // 농지 상세 정보 
+    document.querySelector('[data-panel="cultivation"]').setAttribute('aria-hidden', false);
+} else if (window.location.hash === "#announ") {
+    document.querySelector('[data-panel="announ"]').setAttribute('aria-hidden', false);
+} else if (window.location.hash === "#contact") {
+
+}
+const toggleSwitch = document.querySelectorAll('.switch-group .toggle')
+toggleSwitch.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+        const siblings = toggle.parentElement.children;
+        for (let sibling of siblings) {
+            sibling.classList.remove('active');
+        }
+        toggle.classList.toggle('active');
+    })
+})
+
+document.addEventListener("DOMContentLoaded", () => {
+  // PC에서만 작동
+  if (!window.matchMedia("(min-width: 1024px)").matches) return;
+
+  document.querySelectorAll(".drag-popup").forEach((panel) => {
+    const header = panel.querySelector(".pannel__header");
+    if (!header) return;
+
+    let isDragging = false;
+    let offsetX = 0;
+    let offsetY = 0;
+
+    header.style.cursor = "move";
+
+    header.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      const rect = panel.getBoundingClientRect();
+      offsetX = e.clientX - rect.left;
+      offsetY = e.clientY - rect.top;
+      document.body.style.userSelect = "none"; // 텍스트 선택 방지
+      panel.style.transform = "none"; // 중앙 translate 해제
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (!isDragging) return;
+      panel.style.left = `${e.clientX - offsetX}px`;
+      panel.style.top = `${e.clientY - offsetY}px`;
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+      document.body.style.userSelect = "auto";
+    });
+  });
+});
+
+
+
+</script>
+
+
+</body>
+</html>

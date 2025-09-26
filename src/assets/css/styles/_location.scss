@@ -1,0 +1,107 @@
+
+.location{
+    position: absolute;
+    top: 94px;
+    right: var(--gap);
+    z-index: 2;
+    width: 4.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem 0;
+    &__bar{
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid rgba(204, 204, 204, 1);
+        box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+        border-radius: .8rem;
+        overflow: hidden;
+        .btn__screen-zoomin{
+            border-bottom: 1px solid #ccc;
+        }
+        .btn__screen-zoomout{
+            border-top: 1px solid #ccc;
+        }
+        button{
+            display: block;
+            width: 4.4rem;
+            height: 4.4rem;
+            i{
+                display: inline-block;
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+        }
+    }
+}
+
+%toggle{
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(204, 204, 204, 1);
+    background-color: #fff; 
+    height: 4.4rem;
+    border-radius: .8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .6rem 0;
+    gap: .5rem 0;
+    width: 44px;
+    height: 44px;
+    i{
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+    span{
+        font-size: .9rem;
+        line-height: 1;
+        font-weight: 500;
+    }
+    &[aria-selected="true"],
+    &[aria-pressed="true"]{
+        border-color: var(--color-active);
+        span{
+            color: var(--color-active);
+        }
+    }
+}
+
+[data-widget]{
+    &:has(span){
+        @extend %toggle;
+    }
+}
+
+$widget : division, reset , zoomin , zoomout, measure, measureReset,measureRadius,measureArea, measureDistance, spatial, spatialReset,
+spatialRadius, spatialSingle, spatialArea, draw, drawReset, drawArea, drawPoint, drawLine, drawcircle, save, index, legend;
+@each $name in $widget {
+    [data-widget="#{$name}"]{
+        @if $name == measureReset or $name == spatialReset or $name == drawReset or $name == reset {
+            i{
+                background-image: url("../images/icon/reset.svg");
+            }
+            &[aria-pressed="true"]{
+                i{
+                    background-image: url("../images/icon/reset-active.svg");
+                }
+            }
+        }
+        @else{
+            i{
+                background-image: url("../images/icon/#{$name}.svg");
+            }
+            &[aria-selected="true"],
+            &[aria-pressed="true"]{
+                i{
+                    background-image: url("../images/icon/#{$name}-active.svg");
+                }
+            }
+        }
+        
+    }
+}
+

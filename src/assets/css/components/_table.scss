@@ -1,0 +1,41 @@
+@import '../utils/var';
+@import '../utils/function';
+/*
+    table
+*/
+
+.table{
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        border: 0;
+    }
+    th,
+    td{
+        line-height: 1;
+        padding: 1.2rem;
+        border: 1px solid rgba(221, 221, 221, 1);
+        text-align: center;
+        vertical-align: middle;
+        font-size: 1.4rem;
+    }
+    .tac{
+        text-align: center;
+    }
+    thead{
+        th{
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+    }
+    tbody{
+        th{
+            background: #F4F4F4;
+        }
+        td{
+            background-color: #fff;
+            color: rgba(17, 17, 17, 1);
+        }
+    }
+}
+

@@ -1,0 +1,516 @@
+<div class="touch-panel" data-apply="mobile">
+    <div class="touch-container">
+        <div class="drag-zone">
+            <div class="touch-handel"></div>
+        </div>
+        <!-- s: 검색 결과 -->
+        <div class="drag-content" data-drag="result" aria-hidden="true">
+            <div class="search-result-list">
+                <div class="search-result-total">
+                    검색결과 총<span class="search-count">10</span>건
+                </div>
+                <ul>
+                    <li>
+                        <button type="button">
+                            <i class="icon-gps-gray" aria-hidden="true"></i>
+                            <div class="keyword-line">
+                                <strong class="mapping__keyword">염포산</strong>요금소
+                            </div>
+                            <div class="place-street">세종특별시 연서면 안산길 186-33</div>
+                            <div class="place-addr">세종특별시 연서면 고복리 321-9</div>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <div class="keyword-line">
+                                <strong class="mapping__keyword">염포산</strong>요금소
+                            </div>
+                            <div class="place-street">세종특별시 연서면 안산길 186-33</div>
+                            <div class="place-addr">세종특별시 연서면 고복리 321-9</div>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <div class="keyword-line">
+                                <strong class="mapping__keyword">염포산</strong>요금소
+                            </div>
+                            <div class="place-street">세종특별시 연서면 안산길 186-33</div>
+                            <div class="place-addr">세종특별시 연서면 고복리 321-9</div>
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button">
+                            <div class="keyword-line">
+                                <strong class="mapping__keyword">염포산</strong>요금소
+                            </div>
+                            <div class="place-street">세종특별시 연서면 안산길 186-33</div>
+                            <div class="place-addr">세종특별시 연서면 고복리 321-9</div>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- e: 검색 결과 -->
+
+        <!-- s: 레이어 선택 -->
+        <div class="drag-content" data-drag="layer"  aria-hidden="true">
+            <h3 class="content-title">레이어를 선택하세요.</h3>
+            <div class="layer-type-list">
+                <button type="button" class="btn__carto--video mobile-widget" data-carto="video" aria-pressed="false">
+                    <div class="carto_thumb" aria-hidden="true"><img src="./assets/images/icon/thumb-video.png" alt="영상지도"></div>
+                    <span class="carto_name">영상지도</span>
+                </button>
+                <button type="button" class="btn__carto--general mobile-widget" data-carto="general" aria-pressed="false">
+                    <div class="carto_thumb" aria-hidden="true"><img src="./assets/images/icon/thumb-general.png" alt="일반지도"></div>
+                    <span class="carto_name">일반지도</span>
+                </button>
+                <button type="button" class="btn__carto--farmmap mobile-widget" data-carto="farmmap" aria-pressed="false">
+                    <div class="carto_thumb" aria-hidden="true"></div>
+                    <span class="carto_name">팜맵</span>
+                </button>
+                <button type="button" class="btn__carto--lxmap mobile-widget" data-carto="lxmap" aria-pressed="false">
+                    <div class="carto_thumb" aria-hidden="true"></div>
+                    <span class="carto_name">LX맵</span>
+                </button>
+            </div>
+
+            <div class="btn-tab-group">
+                <button type="button" aria-selected="true">법정경계</button>
+                <button type="button" aria-selected="false">날씨</button>
+                <button type="button" aria-selected="false">토양특성</button>
+            </div>
+
+            <div class="tab_wraps">
+                <div class="tab_content" aria-hidden="false">
+                    <ul class="line-list">
+                        <li class="line-list-item">
+                            <span class="subject">법정경계 - 시도</span>
+                            <button type="button" title="숨김" aria-pressed="false" data-pressed="only-me">
+                                <i></i>
+                            </button>
+                        </li> 
+                        <li class="line-list-item">
+                            <span class="subject">법정경계 - 시군구</span>
+                            <button type="button" title="숨김" aria-pressed="false" data-pressed="only-me">
+                                <i></i>
+                            </button>
+                        </li> 
+                        <li class="line-list-item">
+                            <span class="subject">법정경계 - 읍면동</span>
+                            <button type="button" title="숨김" aria-pressed="false" data-pressed="only-me">
+                                <i></i>
+                            </button>
+                        </li> 
+                    </ul>
+                </div>
+                <div class="tab_content" aria-hidden="true">
+                    2
+                </div>
+                <div class="tab_content" aria-hidden="true">
+                    3
+                </div>
+            </div>
+        </div>
+        <!-- e: 레이어 선택 --> 
+
+        <!-- s: 측정 -->
+        <div class="drag-content" data-drag="measure" aria-hidden="true">
+            <h3 class="content-title">측정</h3>
+            <div class="mobile-measure-group">
+                <button type="button" aria-pressed="false" data-pressed="only-me">
+                    <i aria-hidden="true" class="icon-distance"></i>
+                    <span class="option-name">거리측정</span>
+                </button>
+                <button type="button" aria-pressed="false" data-pressed="only-me">
+                    <i aria-hidden="true" class="icon-area"></i>
+                    <span class="option-name">면적측정</span>
+                </button>
+                <button type="button" onClick="alert('reset')">
+                    <i aria-hidden="true" class="icon-eraser"></i>
+                    <span class="option-name">초기화</span>
+                </button>
+            </div> 
+        </div>
+        <!-- e: 측정 -->
+
+        <!-- s: 서부 경찰서 -->
+        <div class="drag-content" data-drag="search-detail" aria-hidden="true">
+            <div class="search-result-view">
+                <h3 class="content-title"><i class="icon-pin pin-finance"></i>서부 경찰서</h3>
+                <div class="detail-container">
+                    <ul class="list-data">
+                        <li class="item">
+                            <span class="attr">대분류</span>
+                            <span class="value">행정 시설</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">중분류</span>
+                            <span class="value">행정 경찰관서</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">전화번호</span>
+                            <span class="value">044-502-3435</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">도로주소</span>
+                            <span class="value">세종특별시 연서면 안산길 186-33</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">지번주소</span>
+                            <span class="value">세종특별시 연서세종특별시세종특별시세종특별시면 고복리 321-9</span>
+                        </li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <!-- e: 서부 경찰서 -->
+
+        <!-- s: 나의 농지 -->
+        <div class="drag-content" data-drag="mafra" aria-hidden="true">
+            <div class="search-result-view">
+                <h3 class="content-title">나의 농지</h3>
+                <div class="detail-container">
+                    <div class="place-addr">
+                        <div class="addr_rel">
+                            <span>도로명</span>
+                            <p>서울 동대문구 사가정보 27길</p>
+                        </div>
+                        <div class="addr_rel">
+                            <span class="bg2">지번</span> 
+                            <p>서울 동대문구 장안동 95-2</p>
+                        </div>
+                    </div>
+
+                    <div class="scroll-x border-top-1">
+                        <button type="button" aria-pressed="true" class="btn"><span>경영체</span></button>
+                        <button type="button" aria-pressed="false" class="btn"><span>경영체</span></button>
+                        <button type="button" aria-pressed="false" class="btn"><span>경영체</span></button>
+                        <button type="button" aria-pressed="false" class="btn"><span>경영체</span></button>
+                        <button type="button" aria-pressed="false" class="btn"><span>경영체</span></button>
+                        <button type="button" aria-pressed="false" class="btn"><span>경영체</span></button>
+                        <button type="button" aria-pressed="false" class="btn"><span>경영체</span></button>
+                        <button type="button" aria-pressed="false" class="btn"><span>경영체</span></button>
+                        <button type="button" aria-pressed="false" class="btn"><span>경영체</span></button>
+                    </div>
+
+                    <h3 class="content-title up">나의 농지</h3>
+                    <ul class="list-data">
+                        <li class="item">
+                            <span class="attr">등록일</span>
+                            <span class="value">2023.10.12</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">공부 지목</span>
+                            <span class="value">밭</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">실제 지목</span>
+                            <span class="value">밭</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">소유자</span>
+                            <span class="value">밭 외 1</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">경영 형태</span>
+                            <span class="value">임차</span>
+                        </li>
+
+                        <li class="item">
+                            <span class="attr">임차기간</span>
+                            <span class="value">2020.4.6 - 2030.4.5</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">공부상 면적</span>
+                            <span class="value">100m<sup>2</sup></span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">실제 경작 면적 <button type="button"><i class="icon-ask"></i></button></span>
+                            <span class="value">100m<sup>2</sup></span>
+                        </li>
+                    </ul>
+
+                    <h3 class="content-title up mt-20">농지(지번)당 시설 현황</h3>
+                    <ul class="list-data">
+                        <li class="item">
+                            <span class="attr">등록일</span>
+                            <span class="value">2023.10.12</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">공부 지목</span>
+                            <span class="value">밭</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">실제 지목</span>
+                            <span class="value">밭</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">소유자</span>
+                            <span class="value">밭 외 1</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">경영 형태</span>
+                            <span class="value">임차</span>
+                        </li>
+
+                        <li class="item">
+                            <span class="attr">임차기간</span>
+                            <span class="value">2020.4.6 - 2030.4.5</span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">공부상 면적</span>
+                            <span class="value">100m<sup>2</sup></span>
+                        </li>
+                        <li class="item">
+                            <span class="attr">실제 경작 면적 <button type="button"><i class="icon-ask"></i></button></span>
+                            <span class="value">100m<sup>2</sup></span>
+                        </li>
+                    </ul>
+
+                </div> 
+            </div>
+        </div> 
+        <!-- e: 나의 농지 --> 
+
+        <!-- s: 나의 지원사업 -->
+        <div class="drag-content" data-drag="mabs" aria-hidden="true">
+            <h3 class="content-title">나의 지원 사업</h3>
+            <div class="detail-container">
+                <div class="btn-tab-group column-3">
+                    <button type="button" aria-selected="true">신청내역</button>
+                    <button type="button" aria-selected="false">맞춤사업</button>
+                    <button type="button" aria-selected="false">관심사업</button>
+                </div>
+
+                <div class="tab_wraps">
+                    <div class="tab_content" aria-hidden="false">
+                        <div class="content-condition">
+                            <span class="total">총 <b>21</b>건</span>
+                            <div class="sort">
+                                <label for="">연도</label>
+                                <select name="" id="" title="연도선택">
+                                    <option value="">전체</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="subsidy-section">
+                            <div class="labeling">
+                                <span><i class="icon-subsidy"></i>총 <em>받은 보조금</em><i class="icon-ask"></i></span>
+                                <p class="price">3,000,000원</p>
+                            </div>
+                        </div>
+
+                        <div class="subsidy-list">
+                            <div class="info">
+                                <span class="date">2024.4.14</span>
+                                <em class="complete">접수완료(선정)</em>
+                            </div>
+                            <p class="subject">유기질비료지원사업(통합사업)</p>
+                            <p class="ins">(신청자 : 나농부)</p>
+                            <button type="button" class="btn-view"><span>신청서 보기</span></button>
+                        </div>
+
+                        <div class="subsidy-list">
+                            <div class="info">
+                                <span class="date">2024.4.14</span>
+                                <em class="cancel">접수완료(선정)</em>
+                            </div>
+                            <p class="subject">유기질비료지원사업(통합사업)</p>
+                            <p class="ins">(신청자 : 나농부)</p>
+                            <div class="receive-price">받은 보조금 : 1,300,000원</div>
+                            <button type="button" class="btn-view"><span>신청서 보기</span></button>
+                        </div>
+
+                        <div class="more-area">
+                            <button type="button" class="btn-outline">
+                                <span>더보기 (1/N)</span>
+                                <i class="icon-plus"></i>
+                            </button>
+                        </div>
+
+                        <div class="notic"><i class="icon-i"></i>최근 5년 이내의 신청내역 조회만 가능해요.</div>
+
+                    </div>
+                    <div class="tab_content" aria-hidden="true">
+                        없음12
+                    </div>
+                    <div class="tab_content" aria-hidden="true">
+                        없음1234
+                    </div>
+                </div>
+            </div>  
+        </div> 
+        <!-- e: 나의 지원사업 --> 
+
+        <!-- s: 사업공고 상세 -->
+        <div class="drag-content" data-drag="annou" aria-hidden="true">
+            <h3 class="content-title">사업공고 상세</h3>
+            <div class="detail-container">
+                <div class="card-content">
+                    <div class="card-util">
+                        <div class="tag">
+                            <span class="badge badge-dark-orange"><i class="icon-none"></i>공고</span>
+                            <span class="badge badge-blue">지자체</span>
+                        </div>
+                        <div class="util">
+                            <button type="button" class="link-share"><i class="icon-share"></i></button>
+                            <button type="button" class="link-favorite"><i class="icon-favorite"></i></button>
+                        </div>
+                    </div>
+                    <p class="subject"><a href="#">[경상남도] 경주시 2024년 유2024년 유기2024년 유기2024년 유기2024년 유기기</a></p>
+                    <p class="desc">농림축산 부산물의 자원화 · 재활용을 촉진하고 유기물 공급으로 토양 환농림축산 부산물의 자원화 · 재활용을 촉진하고 유기물 공급으로 토양농림축산 부산물의 자원화 · 재활용을 촉진하고 유기물 공급으로 토양농림축산 부산물의 자원화 · 재활용을 촉진하고 유기물 공급으로 토양경을 보전하여…</p>
+                    <div class="list-group">
+                        <dl>
+                            <dt>사업명</dt>
+                            <dd>유기질 비료 지원사업</dd>
+                        </dl>
+                        <dl>
+                            <dt>접수기관</dt>
+                            <dd>경상남도 경주시</dd>
+                        </dl>
+                        <dl>
+                            <dt>접수기간</dt>
+                            <dd>2024.4.15~2024.9.14</dd> 
+                        </dl>
+                    </div>
+                    <div class="mt-25">
+                        <a href="#" class="btn-full-active">온라인 즉시지원</a>
+                    </div>
+                </div>
+
+                <div class="btn-tab-group column-2">
+                    <button type="button" aria-selected="true">사업공고 상세</button>
+                    <button type="button" aria-selected="false">연계 사업공고(15)</button>
+                </div>
+                <div class="tab_wraps">
+                    <div class="tab_content" aria-hidden="false">
+                        <div class="scroll-x">
+                            <button type="button" aria-pressed="true" class="btn"><span>공고</span></button>
+                            <button type="button" aria-pressed="false" class="btn"><span>사업개요</span></button>
+                            <button type="button" aria-pressed="false" class="btn"><span>지원자격</span></button>
+                            <button type="button" aria-pressed="false" class="btn"><span>지원내용</span></button>
+                        </div>
+
+                        <div class="border-content">
+                            <div class="repeat-list">
+                                <h3><i class="icon-title1"></i>공고상세</h3>
+                                <dl class="detail-content">
+                                    <dt>공고번호</dt>
+                                    <dd>경주시 공고 제 2024-10호</dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>공고내용</dt>
+                                    <dd>2024년도 유기질 비료 지원사업 신청을 다음과 같이 공고합니다.</dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title2"></i>사업개요</h3>
+                                <dl class="detail-content">
+                                    <dt>목적</dt>
+                                    <dd>일반농가와 비교해 친환경 농가의 초기 소득 감소분 및 생산비 차이를 보전하여 친환경농업 확산에 기여</dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>첨부파일</dt>
+                                    <dd>
+                                        <div class="file-download">
+                                            <p>[별표 1] 등화장치 규격.hwpx</p>
+                                            <div class="link-group">
+                                                <a href=""><i class="icon-down"></i>다운로드</a>
+                                                <a href=""><i class="icon-link"></i>바로보기</a>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title3"></i>지원자격</h3>
+                                <dl class="detail-content">
+                                    <dt class="none"></dt>
+                                    <dd>농업경영정보를 등록한 농업  ·임업인 · 법인으로 친환경인증*을 받은 자
+                                        <p class="etc">* 단, 친환경인증은 사업 기간인 전년 11월부터 당년 10월까지 유효해야 함.</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title4"></i>지원내용</h3>
+                                <dl class="detail-content">
+                                    <dt>지원내용</dt>
+                                    <dd>
+                                        임대농 기계 보관창고 및 임대농 기계·(농기계임대사업소) 임대농 기계 보관창고 건축 및 임대농 기계 구입비 지원(주산지일관 기계화) 경운·정지, 수확까지 일관작업을 할 수 있는 임대 농기계 지원(노후농기계대체) 농기계 임대사업소의 노후농 기계 교체
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title5"></i>접수 및 신청</h3>
+                                <dl class="detail-content">
+                                    <dt>접수 장소</dt>
+                                    <dd>농지소재지 관할 동 행정복지센터</dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>접수 기간</dt>
+                                    <dd>
+                                        <div class="label-cont">
+                                            <b>시작일</b>
+                                            <p>2024년 3월 17일</p>
+                                        </div>
+                                        <div class="label-cont">
+                                            <b>시작일</b>
+                                            <p>2024년 3월 17일</p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>구비서류</dt>
+                                    <dd>
+                                        사업을 희망하는 사회적 농업 조직은 ‘농촌 돌봄서비스 활성화 지원사업 신청서’ (별지 제1-1호, 제1-2호, 제1-3호, 제1-4호 서식)와 자금 사용계획 등을 포함한 ‘사회적 농업 사업계획서’ (별지 제2-1호, 제2-2호, 제2-3호, 제2-4호 서식)를 작성하여 사업장 주소지 소재 시·군에 제출
+                                    </dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>대상자 선정</dt>
+                                    <dd>
+                                        <div class="label-cont">
+                                            <b>선정</b>
+                                            <p>사업 신청 기간 내 신청한 자로서 지원 자격·요건을 갖춘 자(5월)</p>
+                                        </div>
+                                        <div class="label-cont">
+                                            <b>확정</b>
+                                            <p class="color-danger">사업 대상으로 선정된 자로서 친환경농산물 인증을 받고 직불금 사업기간(전년 11월~당년 10월) 중 친환경농업을 충실히 이행한 농업인(11월)</p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title6"></i>문의</h3>
+                                <dl class="detail-content">
+                                    <dt>기관명</dt>
+                                    <dd>경상남도 경주시청</dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>담당과</dt>
+                                    <dd>
+                                        <div class="label-cont">
+                                            <span>친환경농업과</span>
+                                            <div class="tel-info">
+                                                <a href="tel:054-779-8585">054-779-8585 <i class="icon-call"></i></a>
+                                                <a href="tel:054-779-8584">054-779-8584 <i class="icon-call"></i></a>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="">
+                            <a href="#" class="btn-full-none">전체 사업공고 보러가기</a>
+                        </div>
+
+                    </div>
+                    <div class="tab_content" aria-hidden="true">
+                        없음
+                    </div>
+                </div>
+            </div>  
+        </div> 
+        <!-- e: 사업공고 상세 -->
+    </div>
+</div> 

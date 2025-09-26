@@ -1,0 +1,84 @@
+.layer-type-list{
+    display: grid;
+    gap: 0 1.7rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    button{
+        &[aria-pressed="true"]{
+            .carto_thumb{
+                border-color: var(--color-active);
+                &::after{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .carto_name{
+                color: var(--color-active);
+                font-weight: 700;
+            }
+            &.btn__carto--lxmap,
+            &.btn__carto--farmmap{
+                .carto_thumb::after{background-image: none;}
+            }
+        }
+    }
+    .carto_thumb{
+        aspect-ratio: 1 / 1;
+        height: auto;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        position: relative;
+        background-position: 50% 50%;
+        border: 1px solid rgba(221, 221, 221, 1);
+        &::after{
+            content:"";
+            display: block;
+            position: absolute;
+            left: .1rem;
+            top: .1rem;
+            right: .1rem;
+            bottom: .1rem;
+            background: rgba(255, 82, 0, .1) url(../images/icon/check@20x18.svg) no-repeat 50% 50%;
+            opacity: 0;
+            visibility: hidden;
+        }
+        &:has(img){
+            border-color: transparent;
+        }
+        img{
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+    .carto_name{
+        color: #000;
+        display: block;
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+        margin-top: .8rem;
+    }
+}
+
+.line-list-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 0;
+    line-height: 1;
+    border-bottom: 1px solid rgba(238, 238, 238, 1);
+    .subject{
+        font-size: 1.7rem;
+    
+    }
+    button{
+        width: 2rem;height: 2rem;
+        background: url(../images/icon/see.svg) no-repeat 50% 50%;
+    }
+    &:has(button[aria-pressed="true"]){
+        .subject{
+            color: rgba(187, 187, 187, 1);
+        }
+        button{
+            background-image: url(../images/icon/see-active.svg);
+        }
+    }
+}

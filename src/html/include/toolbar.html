@@ -1,0 +1,134 @@
+<div class="toolbar">
+    <div class="toolbar__wrap">
+        <div class="option__add">
+            <button type="button" data-widget="measure" aria-selected='false' aria-controls="measureList">
+                <i aria-hidden="true"></i>
+                <span>측정</span>
+            </button>
+            <div class="option__list" id="measureList" aria-hidden="true">
+                <button type="button" data-widget="measureReset">
+                    <i aria-hidden="true"></i>
+                    <span>초기화</span>
+                </button>
+                <button type="button" data-widget="measureRadius" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>반경측정</span>
+                </button>
+                <button type="button" data-widget="measureArea" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>면적측정</span>
+                </button>
+                <button type="button" data-widget="measureDistance" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>거리측정</span>
+                </button>
+            </div>
+        </div>
+        <div class="option__add">
+            <button type="button" data-widget="spatial" aria-selected='false' aria-controls="spatial">
+                <i aria-hidden="true"></i>
+                <span>공간검색</span>
+            </button>
+            <div class="option__list" id="spatial" aria-hidden="true">
+                <button type="button" data-widget="spatialReset">
+                    <i aria-hidden="true"></i>
+                    <span>초기화</span>
+                </button>
+                <button type="button" data-widget="spatialRadius" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>반경검색</span>
+                </button>
+                <button type="button" data-widget="spatialArea" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>영역검색</span>
+                </button>
+                <button type="button" data-widget="spatialSingle" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>단일검색</span>
+                </button>
+            </div> 
+        </div>
+        <div class="option__add">
+            <button type="button" data-widget="draw" aria-selected='false' aria-controls="draw">
+                <i aria-hidden="true"></i>
+                <span>그리기</span>
+            </button>
+            <div class="option__list" id="draw" aria-hidden="true">
+                <button type="button" data-widget="drawReset">
+                    <i aria-hidden="true"></i>
+                    <span>초기화</span>
+                </button>
+
+                <button type="button" data-widget="drawPoint" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>점 그리기</span>
+                </button>
+
+                <button type="button" data-widget="drawArea" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>면 그리기</span>
+                </button>
+
+                <button type="button" data-widget="drawLine" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>선 그리기</span>
+                </button>
+                <button type="button" data-widget="drawcircle" aria-pressed="false">
+                    <i aria-hidden="true"></i>
+                    <span>원 그리기</span> 
+                </button>
+            </div>
+        </div>
+        
+        <button type="button" data-widget="save" aria-pressed='false'>
+            <i aria-hidden="true"></i>
+            <span>지도저장</span>
+        </button>
+        <button type="button" data-widget="index" aria-pressed='false'>
+            <i aria-hidden="true"></i>
+            <span>인덱스맵</span>
+        </button>
+        <button type="button" data-widget="legend" aria-pressed='false'>
+            <i aria-hidden="true"></i>
+            <span>범례</span>
+        </button>
+    </div>
+    <div class="legend">
+        <div class="pannel">
+            <div class="pannel__header">
+                <h3 class="pannel__title">범례</h3>
+                <div class="pannel__util">
+                    <button type="button" class="pannel__button btn__close" title="범례 닫기" 
+                    data-standalone="close" 
+                    data-standalone-target="data-widget/legend"><i class="icon" aria-hidden="true"></i></button>
+                </div>
+            </div> 
+            <div class="content">
+                <div class="legend__content"> 
+                    <h4>현 저수율(%)</h4>
+                    <div class="legend__item">
+                        <span>60% 초과</span>
+                    </div>
+                    <div class="legend__item">
+                        <span>50%초과~60%이하</span>
+                    </div>
+                    <div class="legend__item">
+                        <span>40%초가~50%이하</span>
+                    </div>
+                    <div class="legend__item">
+                        <span>40%이하</span>
+                    </div>
+                    <div class="legend__item">
+                        <span>결측</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="index">
+        <button type="button" class="btn__close" title="인덱스맵 닫기"
+        data-standalone="close" 
+        data-standalone-target="data-widget/index"></button>
+        <div class="index-view"></div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+/* badge */
+.badge{
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: .8rem;
+}
+
+.badge-orange{
+    color: rgba(255, 82, 0, 1);
+    background: rgba(255, 246, 242, 1);
+}
+.badge-dark-orange{
+    color: #fff;
+    background: #FF6437;
+}
+
+.badge-blue{
+    color: #0030AC;
+    background: #E9F2FF;
+}

@@ -1,0 +1,37 @@
+
+.search-result-total{
+    font-size: 1.7rem;
+    line-height: 1;
+    color: #111;
+    margin-bottom: 2.4rem;
+}
+.search-count{
+    font-weight: 600;
+    display: inline-block;
+    margin: 0 0.3rem;
+}
+.search-result-list{
+    ul{
+        border-top: 1px solid rgba(221, 221, 221, 1);
+        li{
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(221, 221, 221, 1);
+            button{
+                display: block;
+                text-align: left;
+                width: 100%;
+                position: relative;
+                padding-left: 2rem;
+                i{
+                    position: absolute;
+                    left: 0;
+                    top: .2rem;
+                }
+            }
+            .keyword-line{font-size: 1.7rem;font-weight: 700;margin-bottom: .8rem;}
+            .mapping__keyword{color: var(--color-active);}
+            .place-street{font-size: 1.7rem;color: #1d1d1d;}
+            .place-addr{font-size: 1.5rem;color: rgba(85, 85, 85, 1);margin-top: .4rem;}
+        }
+    }
+}

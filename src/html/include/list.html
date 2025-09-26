@@ -1,0 +1,1054 @@
+<!-- modal__pannel 호출시에만 list에 root-permission 클래스 추가 -->
+<div class="list">
+    <div class="modal__dimmed"></div>
+    <div class="pannel modal_pannel" data-panel="introNotice" aria-hidden="true" id="introNotice">
+        <header class="pannel__header">
+            <h3 class="pannel__title">안내</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__close" title="닫기"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+
+        <div class="content" id="introNoticeWrap" aria-hidden="false">
+            <div class="change-notice">
+            <p class="title">
+                <strong>다른 정보</strong>도 변경하시려면,<br />
+                아래 항목을 선택하세요.
+            </p>
+            <p class="desc">
+                ‘저장’을 선택하시면, 변경된 정보가 저장되고<br />
+                최종 농업경영체 신청서 확인 단계로 이동해요.
+            </p>
+            
+            <div class="option-buttons">
+                <button class="btn active">전체변경</button>
+                <button class="btn">농업인증 변경</button>
+                <button class="btn">농지추가/삭제</button>
+            </div>
+            
+            <div class="action-buttons">
+                <button class="gis-btn outline">닫기</button>
+                <button class="gis-btn">저장</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 안내1 -->
+
+    <div class="pannel modal_pannel" data-panel="initNotice" aria-hidden="true" id="initNotice">
+        <header class="pannel__header">
+            <h3 class="pannel__title">안내</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__close" title="닫기"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+
+        <div class="content" id="initNoticeWrap" aria-hidden="false">
+            <div class="text">
+                지도화면에서 농지목록의 필지정보를 선택하여<br>
+                농지정보를 추가/삭제 해주세요.
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="gis-btn">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- // 안내2 -->
+
+    <div class="pannel modal_pannel drag-popup" data-panel="regist" aria-hidden="false" id="regist">
+        <header class="pannel__header"> 
+            <h3 class="pannel__title">농지별 재배품목 등록</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="registWrap" aria-hidden="false">
+            <div class="regist__addr"><span class="badge badge-orange">주소</span>전남 순천시 황전면 과목리 10-1</div>
+            <div class="regist__content">
+                <div class="regist__rows_wrap">
+                    <div class="regist__rows first">
+                        <div class="regist__item--title">
+                            <strong>품목별 재배면적1</strong>
+                            <button class="btn__delete">
+                                <i></i>
+                                삭제하기
+                            </button>
+                        </div>
+                        <div class="regist__item--form">
+                            <div class="regist__item--grid first">
+                                <strong class="label">시설종류</strong>
+                                <div class="form-group">
+                                    <select name="" id="" title="품목 선택" class="form-border form-select form-lg">
+                                        <option value="">품목 선택</option>
+                                        <option value="1">벼</option>
+                                        <option value="2">보리</option>
+                                        <option value="3">밀</option>
+                                        <option value="4">콩</option>
+                                    </select>    
+                                </div>
+                            </div>
+                            <div class="regist__item--grid">
+                                <div class="col">
+                                    <strong class="label">재배품목</strong>
+                                    <div class="form-group regist__search">
+                                        <input type="text" placeholder="품목명 검색" class="form-input form-border ">
+                                        <button class="btn-search" aria-label="재배면적 검색"><i class="icon icon-search"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="label">시설 재배면적
+                                        <button type="button" class="btn__calculator">
+                                            <img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/ic_calculator.png" alt="계산기">
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-input form-border" title="시설 재배면적">
+                                        <span class="unit">㎡</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="label">노지 재배면적
+                                        <button type="button" class="btn__calculator">
+                                            <img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/ic_calculator.png" alt="계산기">
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-input form-border" title="노지 재배면적">
+                                        <span class="unit">㎡</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="regist__rows">
+                        <div class="regist__item--title">
+                            <strong>품목별 재배면적1</strong>
+                            <button class="btn__delete">
+                                <i></i>
+                                삭제하기
+                            </button>
+                        </div>
+                        <div class="regist__item--form">
+                            <div class="regist__item--grid first">
+                                <strong class="label">시설종류</strong>
+                                <div class="form-group">
+                                    <select name="" id="" title="품목 선택" class="form-border form-select form-lg">
+                                        <option value="">품목 선택</option>
+                                        <option value="1">벼</option>
+                                        <option value="2">보리</option>
+                                        <option value="3">밀</option>
+                                        <option value="4">콩</option>
+                                    </select>    
+                                </div>
+                            </div>
+                            <div class="regist__item--grid">
+                                <div class="col">
+                                    <strong class="label">재배품목</strong>
+                                    <div class="form-group regist__search">
+                                        <input type="text" placeholder="품목명 검색" class="form-input form-border ">
+                                        <button class="btn-search" aria-label="재배면적 검색"><i class="icon icon-search"></i></button>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="label">시설 재배면적
+                                        <button type="button" class="btn__calculator">
+                                            <img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/ic_calculator.png" alt="계산기">
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-input form-border" title="시설 재배면적">
+                                        <span class="unit">㎡</span>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="label">노지 재배면적
+                                        <button type="button" class="btn__calculator">
+                                            <img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/ic_calculator.png" alt="계산기">
+                                        </button>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-input form-border" title="노지 재배면적">
+                                        <span class="unit">㎡</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="regist__add">
+                    <button id="itemAdd">품목별 재배면적 추가 <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/button/ic_btn_more.svg" alt=""></i></button>
+                </div>
+
+                <div class="regist__add-notic">
+                    <div><i></i>안내사항</div>
+                    <p>해당 지번의 농지에 연간 재배하는 모든 재배 품목을 작성</p>
+                </div>
+            </div>
+
+            <div class="regist_footer">
+                <button type="button" class="btn__cancel">취소</button>
+                <button type="button" class="btn__save">확인</button>
+            </div>
+        </div>
+    </div>
+    <!-- // 농지별 재배품목 등록 -->
+    <div class="pannel modal_pannel drag-popup" data-panel="registSearch" aria-hidden="false" id="registSearch">
+        <header class="pannel__header">
+            <h3 class="pannel__title">재배품목을 검색</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="registSearchContent" aria-hidden="false">
+            <div class="regist__search">
+                <input type="text" placeholder="품목명 검색">
+                <button class="btn-search" aria-label="재배면적 검색"><i class="icon icon-search"></i></button>
+            </div>
+            <p class="regist__search_desc">아래는 대표적인 품목으로 원하시는 품목이 없는 경우, <br>검색하여 선택해 주세요.</p>
+            <div class="regist__search__result">
+                검색결과 총 <b>2</b>건
+            </div>
+            <div class="regist__list">
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_rice.svg" alt=""></i>
+                    <div>벼</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_bean.svg" alt=""></i>
+                    <div>콩</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_corn.svg" alt=""></i>
+                    <div>옥수수</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_potato.svg" alt=""></i>
+                    <div>감자</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_spotato.svg" alt=""></i>
+                    <div>고구마</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_radish.svg" alt=""></i>
+                    <div>무</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_lettuce.svg" alt=""></i>
+                    <div>배추</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_garlic.svg" alt=""></i>
+                    <div>마늘</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_onion.svg" alt=""></i>
+                    <div>양파</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_pepper.svg" alt=""></i>
+                    <div>건고추</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_apple.svg" alt=""></i>
+                    <div>사과</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_grape.svg" alt=""></i>
+                    <div>포도</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_persimmon.svg" alt=""></i>
+                    <div>떫은감</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_tangerines.svg" alt=""></i>
+                    <div>감귤</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_peach.svg" alt=""></i>
+                    <div>복숭아</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_strawberry.svg" alt=""></i>
+                    <div>딸기</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_sesame.svg" alt=""></i>
+                    <div>참깨</div>
+                </button>
+                <button>
+                    <i><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_produce_perilla_seeds.svg" alt=""></i>
+                    <div>들깨</div>
+                </button>
+            </div>
+
+            <!-- 페이징 초기 disply: none -->
+            <div class="modal__paging">
+                @@include("./paging.html")
+            </div>
+        </div>
+    </div>
+    <!-- // 농지별 재배품목 검색 -->
+    <div class="pannel modal_pannel" data-panel="registCalculate" aria-hidden="true" id="registCalculate">
+        <header class="pannel__header">
+            <h3 class="pannel__title">면적단위 변환하기</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="registCalculateContent" aria-hidden="false">
+            <div class="regist__calc_wrap">
+                <div class="form-group">
+                    <label for="calcInput" class="label">면적</label>
+                    <input type="text" id="calcInput" class="form-input form-border" title="면적">
+                </div>
+                <div class="form-group">
+                    <div class="label">단위</div>
+                    <div class="calc__unit_group">
+                        <button type="button" class="calc__unit active">ha</button>
+                        <button type="button" class="calc__unit">평</button>
+                        <button type="button" class="calc__unit">m²</button>
+                    </div>
+                </div>
+                <div class="calc__arrow">
+                    <button type="button"><img src="https://edu.nongupez.go.kr/nsm/ui/theme/images/controls/image/img_change.png" alt=""></button>
+                </div>
+                <div class="form-group">
+                    <label for="calcTarget" class="label">변환할 단위</label>
+                    <button type="button" id="calcTarget" class="form-input form-border form-block">평</button>
+                </div>
+                <div class="calc__result_wrap">
+                    <div class="label">변환 결과</div>
+                    <div class="calc__result_text">
+                        <div class="calc__result_from">0.1 ha = </div>
+                        <div class="calc__result_value">302.5 평</div>
+                    </div>
+                </div>
+                <div class="calc__apply_btn-wrap">
+                    <button class="calc__apply_btn">적용하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 농지별 재배품목 검색 -->
+
+
+    <div class="pannel" data-panel="result" aria-hidden="true">
+        <header class="pannel__header">
+            <h3 class="pannel__title">검색결과 <em class="search__total">(7건)</em></h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__collapse" aria-controls="listContent" aria-selected="true" title="검색 목록 축소"><i class="icon" aria-hidden="true"></i></button>
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="listContent" aria-hidden="false">
+            <div class="list__search--item">
+                <i class="icon" aria-hidden="true"></i>
+                <button type="button" class="list__sarch--toggle">
+                    <p class="address__type--01">서울특별시 용산구 새창로8길 157 (산천동, 한강타운)</p>
+                    <p class="address__type--02">서울특별시 용산구 산천동 204 한강타운</p>
+                </button>
+            </div>
+        </div> 
+    </div>
+    <!-- // 검색결과 -->
+    <div class="pannel" data-panel="layer"  aria-hidden="true">
+        <header class="pannel__header">
+            <h3 class="pannel__title">레이어</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__collapse" aria-controls="layerContent" aria-selected="true" title="레이어 목록 축소"><i class="icon" aria-hidden="true"></i></button>
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기" onClick="PanelClose('layer'); CartoBtnActiveRemove('layer')"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="layerContent" aria-hidden="false">
+            <div class="layer__hgroup">
+                <div class="layer__tab" role="tablist" aria-label="레이어 공통 및 업무 탭">
+                    <button role="tab" type="button" class="active" aria-controls="lay1" aria-selected="true">공통</button>
+                    <button role="tab" type="button" aria-controls="lay2" aria-selected="false">업무</button>                    
+                </div>
+                <button type="button" class="btn__add" title="추가?"><span class="sr-only">추가</span></button>
+            </div>
+
+            <div class="layerList tabpanel" role="tabpanel" id="lay1" aria-hidden="false">
+                <ul class="infolist">
+                    <li class="item">
+                        <div class="group">
+                            <button type="button" class="btn__collapse"><i aria-hidden="true"></i><span>법정경계</span></button>
+                            <div class="item__utils">
+                                <button class="draggable" title="순서 변경"></button>
+                            </div>
+                        </div>
+                        <ul class="depth">
+                            <li class="depth__item">
+                                <span class="depth__item--subject">법정경계 - 시도</span>
+                                <div class="item__utils">
+                                    <div class="opacity__control">
+                                        <button type="button" class="btn__opacity" title="투명도 조절 열림" aria-selected="false"></button>
+                                        <div class="opacity__tool">
+                                            <label for="h2">투명도</label>
+                                            <input type="range" value="50" min="0" max="100" id="h2">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn__see" title="보기" aria-pressed="false"></button>
+                                    <button class="draggable" title="순서 변경" aria-pressed="false"></button>
+                                </div>
+                            </li>
+                            <li class="depth__item">
+                                <span class="depth__item--subject">법정경계 - 시도</span>
+                                <div class="item__utils">
+                                    <div class="opacity__control">
+                                        <button type="button" class="btn__opacity" title="투명도 조절 열림" aria-selected="false"></button>
+                                        <div class="opacity__tool">
+                                            <label for="h2">투명도</label>
+                                            <input type="range" value="50" min="0" max="100" id="h2">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn__see" title="보기" aria-pressed="false" disabled></button>
+                                    <button class="draggable" title="순서 변경" aria-pressed="false" disabled></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="layerList tabpanel" role="tabpanel" id="lay2" aria-hidden="true">
+                <ul class="infolist">
+                    <li class="item">
+                        <div class="group">
+                            <button type="button" class="btn__collapse"><i aria-hidden="true"></i><span>지적</span></button>
+                            <div class="item__utils">
+                                <button type="button" class="btn__add2" title="추가"></button>
+                                <div class="opacity__control">
+                                    <button type="button" class="btn__opacity" title="투명도 조절 열림" aria-selected="false"></button>
+                                    <div class="opacity__tool">
+                                        <label for="h2">투명도</label>
+                                        <input type="range" value="50" min="0" max="100" id="h2">
+                                    </div>
+                                </div>
+                                <button class="draggable" title="순서 변경"></button>
+                            </div>
+                        </div>
+                        <ul class="depth">
+                            <li class="depth__item">
+                                <span class="depth__item--subject">경영체 농지</span>
+                                <div class="item__utils">
+                                    <button type="button" class="btn__remove" title="삭제"></button>
+                                    <div class="opacity__control">
+                                        <button type="button" class="btn__opacity" title="투명도 조절 열림" aria-selected="false"></button>
+                                        <div class="opacity__tool">
+                                            <label for="h2">투명도</label>
+                                            <input type="range" value="50" min="0" max="100" id="h2">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn__see" title="보기" aria-pressed="false"></button>
+                                    <button class="draggable" title="순서 변경" aria-pressed="false"></button>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+    </div>
+    <!-- // 검색결과 -->
+
+    <div class="pannel" data-panel="myfarm"  aria-hidden="true">
+        <header class="pannel__header">
+            <h3 class="pannel__title">나의 농지 <em class="search__total">(7건)</em></h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__collapse" aria-controls="listContent2" aria-selected="true" title="검색 목록 축소"><i class="icon" aria-hidden="true"></i></button>
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content mb_fn" id="listContent2" aria-hidden="false">
+            <div>
+                <ul class="list__type--01">
+                    <li>
+                        <div class="wraps">
+                            <i class="icon-pin pin-education"><span class="sr-only">교육</span></i> 
+                            <button type="button" class="active-toggle">서울 동대문구 장안동95-2</button>
+                            <div class="detail">
+                                <dl>
+                                    <dt>구분</dt>
+                                    <dd>진흥</dd>
+                                </dl>
+                                <dl>
+                                    <dt>지목</dt>
+                                    <dd>답</dd>
+                                </dl>
+                                <dl>
+                                    <dt>면적</dt>
+                                    <dd>56.1</dd>
+                                </dl>
+                            </div>
+                            <div class="mobile-only-apply">
+                                <a href="#">더보기 <i class="icon-arrow-white"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            @@include("./paging.html")
+        </div>
+    </div>
+    <!-- // 나의 농지 -->
+
+    <div class="pannel" data-panel="addr" aria-hidden="true">
+        <header class="pannel__header">
+            <h3 class="pannel__title">서울 동대문구 장안동 95-2</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기"><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="listContent3" aria-hidden="true">
+            <div class="layer__tab -small" role="tablist" aria-label="주소 상세 목록">
+                <button role="tab" type="button" aria-controls="addrDetail01" aria-selected="true" class="active">경영체</button>
+                <button role="tab" type="button" aria-controls="addrDetail02" aria-selected="false">농지</button>
+                <button role="tab" type="button" aria-controls="addrDetail03" aria-selected="false">토지</button>
+                <button role="tab" type="button" aria-controls="addrDetail04" aria-selected="false">시설품목가격</button>
+            </div>
+            <div class="group">
+                <div class="tabpanel" role="tabpanel" id="addrDetail01" aria-hidden="false">
+                    <div class="content-group">
+                        <h4 class="content--title">토지대장</h4>
+                        <div class="table">
+                            <table>
+                                <caption class="sr-only">토지대장 상세 내용</caption>
+                                <colgroup>
+                                    <col class="width25">
+                                    <col class="width25">
+                                    <col class="width25">
+                                    <col class="width25">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">공부지목</th>
+                                        <td>답</td>
+                                        <th scope="row">면전(m<sup>2</sup>)</th>
+                                        <td>56.125</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <h4 class="content--title">공시지가</h4>
+                        <div class="init-hidden-content" aria-hidden="true">
+                            블라블로                                
+                        </div>
+                        <div class="more">
+                            <button type="button" class="btn__more" title="공시지가 내용 열림"><span>더보기</span><i class="icon" aria-hidden="ture"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabpanel" role="tabpanel" id="addrDetail02" aria-hidden="true"></div>
+                <div class="tabpanel" role="tabpanel" id="addrDetail03" aria-hidden="true"></div>
+                <div class="tabpanel" role="tabpanel" id="addrDetail04" aria-hidden="true"></div>
+            </div>
+        </div>
+    </div>
+    <!-- // 주소 상세 -->  
+
+    <div class="pannel" data-panel="facill" aria-hidden="true">
+        <header class="pannel__header">
+            <h3 class="pannel__title">농림 기관 및 시설</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기"
+                onClick="PanelClose('facill')"
+                ><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="listContent4" aria-hidden="false">
+            <div class="search-set">
+                <select name="" class="form-select" title="행정 시설 선택">
+                    <option value="">행정 시설</option>
+                </select>
+                <select name="" class="form-select" title="행정 시설 선택">
+                    <option value="">행정 경찰관서</option>
+                </select>
+            </div>
+            <div class="area-check">
+                <h4>지도 영역 내 조회</h4>
+                <button type="button" role="switch" class="switch" aria-checked="false" title="꺼짐"><span class="sr-only">확장 토글 버튼</span></button>
+            </div>
+            <div class="search__summary">
+                <div class="search__summary--title">
+                    <strong>검색결과</strong>
+                    <em>(2건)</em>
+                </div>
+                <div class="search__summary--util">
+                    <button type="button" class="btn__search--refresh" title="새로고침"></button>
+                </div>
+            </div>
+
+            <div class="list__contain">
+                <ul class="list__type--02">
+                    <li>
+                        <div class="wraps">
+                            <i class="icon" aria-hidden="true"></i>
+                            <div class="detail">
+                                <button type="button" onClick="PanelOpen('facilldetail')">서부 경찰서</button>
+                                <div class="addr_rel">
+                                    <span>도로명</span>
+                                    <p>서울 동대문구 사가정보 27길</p>
+                                </div>
+                                <div class="addr_rel">
+                                    <span class="bg2">지번</span> 
+                                    <p>서울 동대문구 장안동 95-2</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mobile-only-apply">
+                            <a href="#">더보기 <i class="icon-arrow-white"></i></a>
+                        </div>
+                    </li>
+                    <!-- loop -->
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pannel" data-panel="facilldetail" aria-hidden="true">
+        <header class="pannel__header">
+            <h3 class="pannel__title">서부 경찰서</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기" onClick="PanelClose('facilldetail')" ><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content">
+            <div class="content-group">
+                <div class="table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>대분류</th>
+                                <td>행정시설</td>
+                            </tr>
+                            <tr>
+                                <th>중분류</th>
+                                <td>행정 경찰관서</td>
+                            </tr>
+                            <tr>
+                                <th>전화번호</th>
+                                <td>032-502-3435</td>
+                            </tr>
+                            <tr>
+                                <th>도로주소</th>
+                                <td>경기 여주시 상거동 5-5</td>
+                            </tr>
+                            <tr>
+                                <th>지번주소</th>
+                                <td>경기 여주시 농산로 71</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- // 농림 기관 및 시설 --> 
+
+    <!-- s: 농업 용수 -->
+    <div class="pannel" data-panel="agric" aria-hidden="true">
+        <header class="pannel__header">
+            <h3 class="pannel__title">농업 용수</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__collapse" aria-controls="agricContent" aria-selected="true" title="검색 목록 축소"><i class="icon" aria-hidden="true"></i></button>
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기" onClick="PanelClose('agric')" ><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="agricContent">
+            <div class="content-group">
+                <div class="label-list">
+                    <dl>
+                        <dt><span class="badge badge-orange">저수지</span></dt>
+                        <dd>탑 정</dd>
+                    </dl>
+                    <dl>
+                        <dt><span class="badge badge-orange">위치</span></dt>
+                        <dd>충청남도 논산시</dd>
+                    </dl>
+                </div>
+                <h4 class="content--title mt-18">수위 정보</h4>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>측정일자</th>
+                                <th>수위(m)</th>
+                                <th>저수율(%)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2024.01.22</td>
+                                <td>25.32</td>
+                                <td>35.3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- e: 농업 용수 -->
+
+    <!-- s: 경작지도 추가 -->
+    <div class="pannel" data-panel="cultivation" aria-hidden="false">
+        <header class="pannel__header">
+            <h3 class="pannel__title">농지 상세 정보</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__collapse unusual" aria-controls="cultivationDetail1" aria-selected="true" title="검색 목록 축소"><i class="icon" aria-hidden="true"></i></button>
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기" onClick="PanelClose('cultivation')" ><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content cultivationDetail1" id="cultivationDetail">
+            <div class="content-group">
+                <div class="label-list">
+                    <dl>
+                        <dt><span class="badge badge-orange">주소</span></dt>
+                        <dd>세종특별자치시 연서면 고북리 46-1</dd>
+                    </dl>
+                </div>
+                <h4 class="content--title mt-18">기본정보</h4>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>공부지목</th>
+                                <th>실제지목</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>밭</td>
+                                <td>밭</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table mt-12">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>구분</th>
+                                <th>면전(m<sup>2</sup>)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>공부면적</td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-18 mb-12 d-grid grid-column-4">
+                    <select name="" id="" class="form-select form-border form-block form-lg" title="선택">
+                        <option value="">온실(유리) - 100㎡</option>
+                    </select>
+                    <select name="" id="" class="form-select form-border form-block form-lg" title="선택">
+                        <option value="">온실(유리) - 100㎡</option>
+                    </select>
+                    <select name="" id="" class="form-select form-border form-block form-lg" title="선택">
+                        <option value="">온실(유리) - 100㎡</option>
+                    </select>
+                    <select name="" id="" class="form-select form-border form-block form-lg" title="선택">
+                        <option value="">온실(유리) - 100㎡</option>
+                    </select>
+                </div>
+                
+
+                <div data-scroll="">
+                    <h4 class="content--title">
+                        경영주 기본정보
+                        <div class="switch-group">
+                            <button type="button" class="toggle active">개인</button>
+                            <button type="button" class="toggle">법인</button>
+                        </div>
+                    </h4>
+                </div>
+                <div data-scroll="" class="mt-18">
+                    <h4 class="content--title">
+                        경영주 영농이력
+                    </h4>
+                    <div class="table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>농업시작형태</th>
+                                    <td>전 생애 농업에 종사</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div data-scroll="" class="mt-18">
+                    <h4 class="content--title">
+                        경영주 영농이력
+                    </h4>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>종사</th>
+                                    <th>경작</th>
+                                    <th>판매</th>
+                                </tr>
+                            </thead>
+                            <tr>
+                                <td>O</td>
+                                <td>O</td>
+                                <td>X</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- e: 경작지도 추가 -->
+
+    <!-- s: 농림사업 상세 정보 -->
+    <div class="pannel" data-panel="announ" aria-hidden="true">
+        <header class="pannel__header">
+            <h3 class="pannel__title">농지 상세 정보</h3>
+            <div class="pannel__util">
+                <button type="button" class="pannel__button btn__collapse" aria-controls="announDetail" aria-selected="true" title="검색 목록 축소"><i class="icon" aria-hidden="true"></i></button>
+                <button type="button" class="pannel__button btn__close" title="검색 결과 닫기" onClick="PanelClose('announ')" ><i class="icon" aria-hidden="true"></i></button>
+            </div>
+        </header>
+        <div class="content" id="announDetail">
+            <div class="content-group">
+                <div class="card-content">
+                    <div class="card-util">
+                        <div class="tag">
+                            <span class="badge badge-dark-orange"><i class="icon-none"></i>공고</span>
+                            <span class="badge badge-blue">지자체</span>
+                        </div>
+                        <div class="util">
+                            <button type="button" class="link-share"><i class="icon-share"></i></button>
+                            <button type="button" class="link-favorite"><i class="icon-favorite"></i></button>
+                        </div>
+                    </div>
+                    <p class="subject"><a href="#">[경상남도] 경주시 2024년 유2024년 유기2024년 유기2024년 유기기</a></p>
+                    <p class="desc">농림축산 부산물의 자원화 · 재활용을 촉진하고 유기물 공급으로 토양 환농림축산 부산물의 자원화 · 재활용을 촉진하고 유기물 공급으로 토양농림축산 부산물의 자원화 · 재활용을 촉진하고 유기물 공급으로 토양농림축산 부산물의 자원화 · 재활용을 촉진하고 유기물 공급으로 토양경을 보전하여…</p>
+                    <div class="list-group">
+                        <dl>
+                            <dt>사업명</dt>
+                            <dd>유기질 비료 지원사업</dd>
+                        </dl>
+                        <dl>
+                            <dt>접수기관</dt>
+                            <dd>경상남도 경주시</dd>
+                        </dl>
+                        <dl>
+                            <dt>접수기간</dt>
+                            <dd>2024.4.15~2024.9.14</dd> 
+                        </dl>
+                    </div>
+                    <div class="mt-25">
+                        <a href="#" class="btn-full-active">온라인 즉시지원</a>
+                    </div>
+                </div>
+
+                <div class="btn-tab-group column-2">
+                    <button type="button" aria-selected="true">사업공고 상세</button>
+                    <button type="button" aria-selected="false">연계 사업공고(15)</button>
+                </div>
+                <div class="tab_wraps">
+                    <div class="tab_content" aria-hidden="false">
+                        <div class="scroll-x">
+                            <button type="button" aria-pressed="true" class="btn"><span>공고</span></button>
+                            <button type="button" aria-pressed="false" class="btn"><span>사업개요</span></button>
+                            <button type="button" aria-pressed="false" class="btn"><span>지원자격</span></button>
+                            <button type="button" aria-pressed="false" class="btn"><span>지원내용</span></button>
+                        </div>
+
+                        <div class="border-content">
+                            <div class="repeat-list">
+                                <h3><i class="icon-title1"></i>공고상세</h3>
+                                <dl class="detail-content">
+                                    <dt>공고번호</dt>
+                                    <dd>경주시 공고 제 2024-10호</dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>공고내용</dt>
+                                    <dd>2024년도 유기질 비료 지원사업 신청을 다음과 같이 공고합니다.</dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title2"></i>사업개요</h3>
+                                <dl class="detail-content">
+                                    <dt>목적</dt>
+                                    <dd>일반농가와 비교해 친환경 농가의 초기 소득 감소분 및 생산비 차이를 보전하여 친환경농업 확산에 기여</dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>첨부파일</dt>
+                                    <dd>
+                                        <div class="file-download">
+                                            <p>[별표 1] 등화장치 규격.hwpx</p>
+                                            <div class="link-group">
+                                                <a href=""><i class="icon-down"></i>다운로드</a>
+                                                <a href=""><i class="icon-link"></i>바로보기</a>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title3"></i>지원자격</h3>
+                                <dl class="detail-content">
+                                    <dt class="none"></dt>
+                                    <dd>농업경영정보를 등록한 농업  ·임업인 · 법인으로 친환경인증*을 받은 자
+                                        <p class="etc">* 단, 친환경인증은 사업 기간인 전년 11월부터 당년 10월까지 유효해야 함.</p>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title4"></i>지원내용</h3>
+                                <dl class="detail-content">
+                                    <dt>지원내용</dt>
+                                    <dd>
+                                        임대농 기계 보관창고 및 임대농 기계·(농기계임대사업소) 임대농 기계 보관창고 건축 및 임대농 기계 구입비 지원(주산지일관 기계화) 경운·정지, 수확까지 일관작업을 할 수 있는 임대 농기계 지원(노후농기계대체) 농기계 임대사업소의 노후농 기계 교체
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title5"></i>접수 및 신청</h3>
+                                <dl class="detail-content">
+                                    <dt>접수 장소</dt>
+                                    <dd>농지소재지 관할 동 행정복지센터</dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>접수 기간</dt>
+                                    <dd>
+                                        <div class="label-cont">
+                                            <b>시작일</b>
+                                            <p>2024년 3월 17일</p>
+                                        </div>
+                                        <div class="label-cont">
+                                            <b>시작일</b>
+                                            <p>2024년 3월 17일</p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>구비서류</dt>
+                                    <dd>
+                                        사업을 희망하는 사회적 농업 조직은 '농촌 돌봄서비스 활성화 지원사업 신청서' (별지 제1-1호, 제1-2호, 제1-3호, 제1-4호 서식)와 자금 사용계획 등을 포함한 '사회적 농업 사업계획서' (별지 제2-1호, 제2-2호, 제2-3호, 제2-4호 서식)를 작성하여 사업장 주소지 소재 시·군에 제출
+                                    </dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>대상자 선정</dt>
+                                    <dd>
+                                        <div class="label-cont">
+                                            <b>선정</b>
+                                            <p>사업 신청 기간 내 신청한 자로서 지원 자격·요건을 갖춘 자(5월)</p>
+                                        </div>
+                                        <div class="label-cont">
+                                            <b>확정</b>
+                                            <p class="color-danger">사업 대상으로 선정된 자로서 친환경농산물 인증을 받고 직불금 사업기간(전년 11월~당년 10월) 중 친환경농업을 충실히 이행한 농업인(11월)</p>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <div class="repeat-list">
+                                <h3><i class="icon-title6"></i>문의</h3>
+                                <dl class="detail-content">
+                                    <dt>기관명</dt>
+                                    <dd>경상남도 경주시청</dd>
+                                </dl>
+                                <dl class="detail-content">
+                                    <dt>담당과</dt>
+                                    <dd>
+                                        <div class="label-cont">
+                                            <span>친환경농업과</span>
+                                            <div class="tel-info">
+                                                <a href="tel:054-779-8585">054-779-8585 <i class="icon-call"></i></a>
+                                                <a href="tel:054-779-8584">054-779-8584 <i class="icon-call"></i></a>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="">
+                            <a href="#" class="btn-full-none">전체 사업공고 보러가기</a>
+                        </div>
+
+                    </div>
+                    <div class="tab_content" aria-hidden="true">
+                        없음
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- e: 농림사업 상세 정보 -->
+    
+
+    <aside aria-hidden="false" id="contextMenu">
+        <div class="hgroup">
+            <h2>메뉴 선택</h2>
+            <button type="button" class="btn__close" title="메뉴 목록 닫힘" onClick="contextMenuClose()"><i class="icon-close-black" aria-hidden="true"></i></button>
+        </div>
+        <ul>
+            <li>
+                <button type="button">
+                    <strong>경영체</strong>
+                    <span class="small">(경영주 : 홍길동｜농업인 : 3명)</span>
+                </button>
+            </li>
+            <li>
+                <button type="button">
+                    <strong>농지</strong>
+                    <span class="small">(시설 : 5개｜재배품목 : 3개) </span>
+                </button>
+            </li>
+            <li>
+                <button type="button">
+                    <strong>토지</strong>
+                    <span class="small">(지목 : 답｜면적 : 56.1㎡) </span>
+                </button>
+            </li>
+            <li>
+                <button type="button">
+                    <strong>가축·곤충사육</strong>
+                    <span class="small">(사육품목 : 2종)</span>
+                </button>
+            </li>
+            <li>
+                <button type="button">
+                    <strong>품목별 가격</strong>
+                </button>
+            </li>
+        </ul>
+    </aside>
+</div>
+
+<script>
+    document.querySelectorAll('.scroll-x .btn').forEach((button, index) => {
+    button.addEventListener('click', () => {
+        const parentContent = button.closest('.content'); // Find the parent .content element
+        const targetDiv = parentContent.querySelectorAll('.border-content .repeat-list')[index]; // Find the target section inside .border-content
+        document.querySelectorAll('.scroll-x .btn').forEach((sibling) => {
+            sibling.setAttribute('aria-pressed', 'false');
+        });
+        
+        // Set the clicked button's aria-pressed to true
+        button.setAttribute('aria-pressed', 'true');
+        // Scroll within the .content parent container
+        parentContent.scroll({
+            top: targetDiv.offsetTop - parentContent.offsetTop, // Adjust scroll within the parent
+            behavior: 'smooth'  // Smooth scrolling
+        });
+    });
+});
+
+</script>

@@ -1,0 +1,112 @@
+
+.toolbar{
+    position: absolute;
+    right: var(--gap);
+    z-index: 2;
+    top: 400px;
+}
+
+.toolbar__wrap{
+    display: flex;
+    flex-direction: column;
+    gap: .4rem 0;
+    align-items: end;
+}
+.option__add{
+    position: relative;
+}
+.option__list{
+    position: absolute;
+    right: calc(100% + .4rem);
+    top: 0;
+    display: flex;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(187, 187, 187, 1);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    border-radius: .8rem;
+    [data-widget]{border: 0;background: none;box-shadow: none;}
+}
+.option__list[aria-hidden="true"]{opacity: 0;visibility: hidden;}
+.option__list[aria-hidden="false"]{opacity: 1;visibility: visible;}
+
+  
+.legend{
+    position: absolute;
+    display: none;
+    right: 6rem;
+    bottom: 0;
+    width: 18rem;
+    margin-top: 2rem;
+    &.show{
+        display: block;
+    }
+}
+.legend__content{
+    padding: 1.6rem;
+    h4{
+        font-weight: 400;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+}
+$colors : rgba(63, 168, 227, 1), rgba(255, 182, 73, 1), rgba(236, 113, 44, 1), rgba(227, 63, 63, 1), rgba(79, 79, 79, 1);
+
+.legend__item{
+    display: flex;
+    align-items: center;
+    gap: 0 .8rem;
+    +.legend__item{
+        margin-top: .2rem;
+    }
+    span{color: #fff;display: flex;align-items: center;padding-left: 0.8rem;font-size: 1.2rem;height: 2.4rem; width: calc(100% - 2.4rem);}
+    &::before{
+        content:"";
+        display: block;
+        border-radius: 50%;
+        width: 1.6rem;
+        height: 1.6rem;
+        object-fit: fill;
+    }
+    @for $i from 1 through length($colors){
+        &:nth-child(#{$i+1}){
+            span{
+                background-color: nth($colors,$i);
+            }
+            &::before{
+                background-color: nth($colors,$i);
+            }
+        }
+    }
+}
+
+.index{
+    position: absolute;
+    display: none;
+    right: 6rem;
+    bottom: 0;
+    width: 18rem;
+    height: 18rem;
+    background: #fff;
+    border: 1px solid rgba(187, 187, 187, 1);
+    border-radius: .8rem;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: 1.8rem;
+    &.show{
+        display: block;
+    }
+    .btn__close{
+        position: absolute;
+        display: block;
+        right: 1rem;
+        top: 1rem;
+        z-index: 5;
+        background:rgba(221, 221, 221, 0.8)  url("../images/icon/closx6.svg") no-repeat 50% 50%;
+        border-radius: 50%;
+        width: 2.4rem;
+        height: 2.4rem;
+        &:hover{
+            background:rgba(187, 187, 187, 0.8)  url("../images/icon/closex6-active.svg") no-repeat 50% 50%;
+        }
+    }
+}

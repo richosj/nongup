@@ -1,0 +1,30 @@
+<div class="search">
+    <!-- _focus 시 자동검색 펼침 -->
+    <div class="search__wrap">
+        <form>
+            <legend class="sr-only">주소 검색</legend>
+            <div class="search__keyword">
+                <label for="searchType" class="sr-only">분류</label>
+                <select name="searchType" id="searchType" class="form-select">
+                    <option value="도로주소">도로주소</option>
+                </select>
+                <input type="text" title="주소 입력" class="form-input" id="keyword" placeholder="예) 서울특별시 용산구" autocomplete="off">
+                <button type="submit" title="검색" id="btnSearch" class="icon icon-search"><span class="sr-only">검색</span></button>
+            </div>
+        </form>
+        <button type="button" data-apply="mobile" title="메뉴 열림" class="btn__mobile--menu">
+            <i class="icon-menu" aria-hidden="true"></i>
+            <p>메뉴</p>
+        </button>
+
+        <div class="suggest">
+            <ul class="suggest__list">
+                <li><a href="#"><i class="icon"></i><span><strong class="mapping__keyword">대전</strong>터미널</span></a></li>
+                <li><a href="#"><i class="icon"></i><span><strong class="mapping__keyword">대전</strong>터미널</span></a></li>
+                <li><a href="#"><i class="icon"></i><span><strong class="mapping__keyword">대전</strong>터미널</span></a></li>
+                <li><a href="#"><i class="icon"></i><span><strong class="mapping__keyword">대전</strong>터미널</span></a></li>
+            </ul>
+        </div> 
+        <!-- 자동완성 -->
+    </div>
+</div>
