@@ -340,18 +340,31 @@
     }
 }
 .regist__item--form{
-    padding: 1.5rem 2rem;
-    border-radius: 1.5rem;
+    padding: 40px;
+    border-radius: 40px;
     background-color: #F4F4F4;
+    @media screen and (max-width: 768px) {
+        padding: 20px;
+        border-radius: 20px;
+    }
 }
 .regist__item--grid{
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 1.5rem;
+    +.regist__item--grid{
+        margin-top: 1.6rem;
+    }
+    &.triple{
+        grid-template-columns: 1.5fr 1fr 1fr;
+    }
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
         row-gap: 1rem;
+        &.triple{
+            grid-template-columns: 1fr;
+        }
     }
     &.first{
         margin-bottom: 1.5rem;
@@ -391,7 +404,7 @@
         input,
         select {
           flex: 1;
-          height: 40px;
+          height: 5.4rem;
           padding: 0 1rem;
           font-size: 1.4rem;
         }
@@ -540,11 +553,11 @@
   align-items: center;
   background: #fff;
   border: 1px solid #DDDDDD;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+  //box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
   padding: 0.5rem 1.2rem 0.5rem 1.2rem;
-  margin-bottom: 1.2rem;
-  border-radius: 3rem;
-  height: 48px;
+  //margin-bottom: 1.2rem;
+  border-radius: .8rem;
+  height: 5.4rem;
   box-sizing: border-box;
   input[type="text"] {
     flex: 1;
@@ -902,7 +915,8 @@
 #registSearch,
 #regist{
     @media (min-width:1000px) {
-        max-width: 50rem;
+        max-width: 78.5rem;
+        width: 75.5rem;
     }
 }
 
